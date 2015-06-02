@@ -1,4 +1,3 @@
-# $OpenBSD: dot.profile,v 1.4 2005/02/16 06:56:57 matthieu Exp $
 ####################
 # File Name: .profile
 # Author:    Colin J. Mills
@@ -44,21 +43,4 @@ alias xres="xrdb -merge $HOME/.Xdefaults"
 
 
 ### Functions ###
-
-## Audio Functions ## 
-
-setvol()
-{
-   mixerctl outputs.master=$1,$2
-}
-
-
-mute()
-{
-  mixerctl outputs.master=0,0
-}
-
-
-
-
 
