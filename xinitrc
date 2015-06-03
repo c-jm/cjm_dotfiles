@@ -15,6 +15,9 @@ xrdb -load ~/.Xresources
 # Set the annoying beep off.
 xset -b 
 
+# Use xbindkeys to manage the keybindings #
+xbindkeys &
+
 # Star the manager in the background #
 2bwm 
 

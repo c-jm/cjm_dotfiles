@@ -29,15 +29,9 @@ export NOTES_DIR TIME DATE
 
 # Aliases #
 
-## Net Aliases ##
-alias up="sudo ifconfig iwn0   up"
-alias scan="sudo ifconfig iwn0 scan"
-alias dh="sudo dhclient        iwn0"
+## Pacman Aliases ##
+alias pacman="sudo pacman"
 
-
-## Pkg Aliases ##
-alias pkg_add="sudo pkg_add"
-alias pkg_delete="sudo pkg_delete"
 
 ## Term Aliases ##
 alias xres="xrdb -merge $HOME/.Xdefaults"

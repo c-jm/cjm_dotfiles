@@ -40,12 +40,12 @@
 # Examples of commands:
 
 ## Start a terminal ##
-"xterm"
+"urxvt"
   Control + Return 
 
 
-## Start dwb ##
-"dwb"
+## Start firefox ##
+"firefox-nightly"
   Control + w
 
 ## Start dmenu ##
