@@ -13,7 +13,10 @@ PATH=/home/cjm/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/
 # Set my editor #
 EDITOR=vim
 
-export PATH HOME TERM EDITOR
+# Set the PS1 #
+PS1="$ "
+
+export PATH HOME TERM EDITOR PS1
 
 
 # Colin Created Environment Variables #

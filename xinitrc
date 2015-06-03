@@ -10,7 +10,7 @@
 xsetroot -solid grey20
 
 # Load our resources
-xrdb -load ~/.Xresources
+xrdb -load ~/.Xdefaults
 
 # Set the annoying beep off.
 xset -b 
@@ -18,7 +18,7 @@ xset -b
 # Use xbindkeys to manage the keybindings #
 xbindkeys &
 
-# Star the manager in the background #
+# Start the manager in the background #
 2bwm 
 
 

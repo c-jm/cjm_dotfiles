@@ -6,9 +6,18 @@
 ! Description: My .Xdefaults mainly for xterm
 ! ***********
 
+! URXVT Configuration !
 
-XTerm*loginShell:true
-XTerm*Title:     xterm
-XTerm*faceName:  Droid Sans Mono:pixelsize=20
-XTerm*antiAlias: true
-XTerm*scrollBar: false
+URxvt.scrollBar:    false    ! Turn the scrollbar off!
+URxvt.font:xft:Droid Sans Mono:pixelsize=12
+Xft.dpi: 96
+Xft.antialias:true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintfull
+URxvt.letterSpace:-1
+
+
+
+
+
