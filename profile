@@ -8,7 +8,7 @@
 # System Created Environment Variables #
 
 # Set the path #
-PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
+PATH=/home/cjm/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
 
 # Set my editor #
 EDITOR=vim
@@ -23,8 +23,9 @@ NOTES_DIR=$HOME/data/notes
 
 # I like to have the current time in scripts, and also its useful. #
 TIME=$(date +%X)
+DATE=$(date +%x)
 
-export NOTES_DIR TIME
+export NOTES_DIR TIME DATE
 
 # Aliases #
 
