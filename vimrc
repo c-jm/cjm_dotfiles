@@ -18,8 +18,12 @@ set visualbell                 " Audio hurts the ears
 set autoread                   " Reload changes outside of vim
 set hidden                     " Let buffers work correctly.
 
+
+" **** Disable Commenting **** "
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cor
+
 " Set the mapleader to space
-let mapleader="<Space>"
+let mapleader="\<Space>"
 
 " **** Backups and Swaps   ****
 set noswapfile
@@ -28,7 +32,7 @@ set nowb
 
 
 " **** Syntax Highlighting **** 
-"syntax on                      " Syntax on
+syntax on                      " Syntax on
 filetype plugin on             " Determine by filetype which syntax to use 
 
 " **** Indentation ****
@@ -51,6 +55,16 @@ set smartcase
 
 " **** Keybindings ****
 inoremap jj <Esc>
+
+
+" **** Leader Keybindings ****
+
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>wq :wq<CR>
+
+
+
+
 
 
 

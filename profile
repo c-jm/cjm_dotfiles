@@ -7,8 +7,11 @@
 
 # System Created Environment Variables #
 
+# Import LS_COLOURS #
+. $HOME/.dotfiles/LS_COLORS
+
 # Set the path #
-PATH=/home/cjm/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
+PATH=/home/cjm/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/bin/core_perl:.
 
 # Set my editor #
 EDITOR=vim
@@ -28,7 +31,7 @@ NOTES_DIR=$HOME/data/notes
 TIME=$(date +%X)
 DATE=$(date +%x)
 
-export NOTES_DIR TIME DATE
+export NOTES_DIR TIME DATE PS1
 
 # Aliases #
 
