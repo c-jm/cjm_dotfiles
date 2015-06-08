@@ -59,8 +59,16 @@ inoremap jj <Esc>
 
 " **** Leader Keybindings ****
 
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>wq :wq<CR>
+nnoremap <Leader>w :w<CR>   " A way to write using leaders and the w
+nnoremap <Leader>wq :wq<CR> " Same for writing and quitting.
+
+nnoremap <Leader>id :r!echo $DATE<CR> " Insert the date into a file
+nnoremap <Leader>it :r!echo $TIME<CR> " Insert the time into a file
+
+nnoremap <Leader>in :r!echo $NAME<CR> " Insert my name into a file
+nnoremap <Leader>ie :r!echo $EMAIL<CR> " Insert my email into a file
+
+
 
 
 

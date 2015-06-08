@@ -8,6 +8,7 @@ DOT_FILES="xinitrc Xdefaults xbindkeysrc vimrc profile vim"
 
 
 # Logic #
+
 for file in $DOT_FILES; do
     echo "Symlinking file: $file"
     ln -sf $DOT_DIR/$file $HOME/.$file

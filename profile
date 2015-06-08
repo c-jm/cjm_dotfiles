@@ -1,14 +1,11 @@
 ####################
-# File Name: .profile
+# File Name: .bashrc
 # Author:    Colin J. Mills
 # Date:      2015/05/28
-# Description: My .profile for a newly made OpenBSD system
+# Description: My .profile 
 ####################
 
 # System Created Environment Variables #
-
-# Import LS_COLOURS #
-. $HOME/.dotfiles/LS_COLORS
 
 # Set the path #
 PATH=/home/cjm/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/bin/core_perl:.
@@ -19,10 +16,15 @@ EDITOR=vim
 # Set the PS1 #
 PS1="$ "
 
+
 export PATH HOME TERM EDITOR PS1
 
 
 # Colin Created Environment Variables #
+
+# I like to have my name in my environment #
+NAME="Colin J. Mills"
+EMAIL="colin.j.mills96@gmail.com"
 
 # Where I store my notes #
 NOTES_DIR=$HOME/data/notes
@@ -31,7 +33,7 @@ NOTES_DIR=$HOME/data/notes
 TIME=$(date +%X)
 DATE=$(date +%x)
 
-export NOTES_DIR TIME DATE PS1
+export NOTES_DIR TIME DATE PS1 NAME EMAIL
 
 # Aliases #
 
@@ -40,8 +42,14 @@ alias pacman="sudo pacman"
 
 
 ## Term Aliases ##
+alias off="sudo shutdown  -h now"
 alias xres="xrdb -merge $HOME/.Xdefaults"
+alias snm="sudo systemctl start NetworkManager"
 
 
 ### Functions ###
 
+get_bat()
+{
+    acpi | awk '{print $4}'
+}
