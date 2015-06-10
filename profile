@@ -37,8 +37,15 @@ export NOTES_DIR TIME DATE PS1 NAME EMAIL
 
 # Aliases #
 
-## Pacman Aliases ##
-alias pacman="sudo pacman"
+## Package Aliases ##
+alias pkg_add="sudo pkg_add "
+
+# Networking Aliases ##
+alias up="sudo ifconfig iwn0 up"
+alias dh="sudo dhclient iwn0"
+
+
+
 
 
 ## Term Aliases ##
