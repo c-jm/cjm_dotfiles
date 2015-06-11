@@ -41,6 +41,7 @@ export NOTES_DIR TIME DATE PS1 NAME EMAIL
 
 # Aliases #
 
+<<<<<<< HEAD
 
 # Volume Aliases #
 
@@ -48,6 +49,16 @@ function setvol
 {
    mixerctl outputs.master=$1,$2
 }
+=======
+## Package Aliases ##
+alias pkg_add="sudo pkg_add "
+
+# Networking Aliases ##
+alias up="sudo ifconfig iwn0 up"
+alias dh="sudo dhclient iwn0"
+
+
+>>>>>>> 09e4623f3b0c1e1d8a18e60eace540ffd82854c4
 
 
 
