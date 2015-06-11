@@ -1,20 +1,14 @@
-! ***********
+!***********
 ! .Xdefaults 
 ! Colin J. Mills
 ! Date: 2015/05/28
 ! Description: My .Xdefaults mainly for xterm
 ! ***********
 
-! URXVT Configuration !
 
-URxvt.scrollBar:    false    ! Turn the scrollbar off!
-URxvt.font:xft:Droid Sans Mono:pixelsize=12
-Xft.dpi: 96
-Xft.antialias:true
-Xft.rgba: rgb
-Xft.hinting: true
-Xft.hintstyle: hintfull
-URxvt.letterSpace:-1
+! xterm !
 
-! Colours !
 
+XTerm*fontFace: DejaVu Sans Mono
+XTerm*fontSize: 12
+XTerm*selectToClipboard: true

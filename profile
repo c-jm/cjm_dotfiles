@@ -17,7 +17,11 @@ EDITOR=vim
 PS1="$ "
 
 
-export PATH HOME TERM EDITOR PS1
+# Set the package path for openbsd #
+PKG_PATH="http://openbsd.cs.toronto.edu/pub/OpenBSD/5.7/packages/`machine -a`/"
+
+
+export PATH HOME TERM EDITOR PS1 PKG_PATH
 
 
 # Colin Created Environment Variables #
@@ -37,19 +41,21 @@ export NOTES_DIR TIME DATE PS1 NAME EMAIL
 
 # Aliases #
 
-## Pacman Aliases ##
-alias pacman="sudo pacman"
+
+# Volume Aliases #
+
+function setvol
+{
+   mixerctl outputs.master=$1,$2
+}
 
 
+
+# Pkg Aliases #
+alias pkg_add="sudo pkg_add "
 ## Term Aliases ##
 alias off="sudo shutdown  -h now"
-alias xres="xrdb -merge $HOME/.Xdefaults"
+alias xres="xrdb -merge $HOME/.Xresources"
 alias snm="sudo systemctl start NetworkManager"
 
 
-### Functions ###
-
-get_bat()
-{
-    acpi | awk '{print $4}'
-}

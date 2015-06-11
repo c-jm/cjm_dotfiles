@@ -19,7 +19,7 @@ xset -b
 xbindkeys &
 
 # Start the manager in the background #
-2bwm 
+evilwm 
 
 
 
