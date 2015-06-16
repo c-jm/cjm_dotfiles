@@ -1,11 +1,9 @@
-! ***********
+!***********
 ! .Xdefaults 
 ! Colin J. Mills
 ! Date: 2015/05/28
 ! Description: My .Xdefaults mainly for xterm
 ! ***********
-
-! URXVT Configuration !
 
 URxvt.scrollBar:    false    ! Turn the scrollbar off!
 URxvt.font:xft:Droid Sans Mono:pixelsize=14
@@ -16,5 +14,7 @@ Xft.hinting: true
 Xft.hintstyle: hintfull
 URxvt.letterSpace:-1
 
-! Colours !
 
+XTerm*fontFace: Adobe Source Code Pro 
+XTerm*fontSize: 14
+XTerm*selectToClipboard: true

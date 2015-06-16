@@ -10,13 +10,19 @@
 xsetroot -solid grey20
 
 # Load our resources
-xrdb -load ~/.Xdefaults
+#xrdb -load ~/.Xresources
 
 # Set the annoying beep off.
 xset -b 
 
+# Start my wallpaper 
+$(./fehbg)
+
 # Use xbindkeys to manage the keybindings #
 xbindkeys &
+
+# Start urxvtd #
+urxvtd &
 
 # Start the manager in the background #
 2bwm 
