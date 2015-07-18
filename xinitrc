@@ -6,8 +6,6 @@
 
 #!/bin/sh
 
-# Set a nice background
-xsetroot -solid grey20
 
 # Load our resources
 #xrdb -load ~/.Xresources
@@ -16,7 +14,7 @@ xsetroot -solid grey20
 xset -b 
 
 # Start my wallpaper 
-$(./fehbg)
+sh .fehbg
 
 # Use xbindkeys to manage the keybindings #
 xbindkeys &

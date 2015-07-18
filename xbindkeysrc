@@ -45,7 +45,7 @@
 
 
 ## Start dwb ##
-"firefox"
+"firefox-nightly"
   Control + w
 
 ## Start dmenu ##

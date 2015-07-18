@@ -49,7 +49,20 @@ alias pacman="sudo pacman "
 
 ## Term Aliases ##
 alias off="sudo shutdown  -h now"
-alias xres="xrdb -merge $HOME/.Xresources"
+alias xres="xrdb -merge $HOME/.Xdefaults"
 alias snm="sudo systemctl start NetworkManager"
+alias ls="ls --color=auto"
 
+## Battery Aliases ##
+
+function bat_stat
+{
+   local BAT=$(acpi| awk '{print $4}' | sed 's/\%//g' |sed 's/\,//g')
+   local DESIRED_CHARGE=100
+
+   if [[ ${BAT} -lt ${DESIRED_CHARGE} ]]; then
+       $(echo "Warning low battery: ${DESIRED_CHARGE}"; sleep 3) | lemonbar -g 50x50
+   fi
+
+}
 

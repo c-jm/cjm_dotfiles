@@ -3,12 +3,27 @@
 " A .vimrc that is a clean slate
 " Took strong inspiration from http:://github.com/skwp/dotfiles/blob/master/vimrc  
 
-" Use vim settings instead of vi.
 set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Plugins 
+Plugin 'gmarik/Vundle.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'plasticboy/vim-markdown'
+
+call vundle#end()
+filetype plugin indent on
+
+
+
+
 
 
 " **** General Configuration ****
-"set number                     " I like line number
+colorscheme hipster
 set backspace=indent,eol,start " Make backspaces work as intended
 set history=1000               " Make sure we remember history
 set showcmd                    " I do like to see the commands I am running.
@@ -53,12 +68,11 @@ set ignorecase
 set smartcase
 
 
-" **** Keybindings ****
+" **** Keyindings ****
 inoremap jj <Esc>
 
 
 " **** Leader Keybindings ****
-
 nnoremap <Leader>w :w<CR>   " A way to write using leaders and the w
 nnoremap <Leader>wq :wq<CR> " Same for writing and quitting.
 
@@ -68,7 +82,10 @@ nnoremap <Leader>it :r!echo $TIME<CR> " Insert the time into a file
 nnoremap <Leader>in :r!echo $NAME<CR> " Insert my name into a file
 nnoremap <Leader>ie :r!echo $EMAIL<CR> " Insert my email into a file
 
+noremap <Leader>bsp :vsp<CR> " Vertical Split
+nnoremap <Leader>sp  :sp<CR>  " Vertical Split
 
+ 
 
 
 
