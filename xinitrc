@@ -14,7 +14,7 @@
 xset -b 
 
 # Start my wallpaper 
-sh .fehbg
+hsetroot -full ~/data/img/wall/et.jpg
 
 # Use xbindkeys to manage the keybindings #
 xbindkeys &

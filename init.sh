@@ -4,7 +4,7 @@
 DOT_DIR="$HOME/.dotfiles"
 
 # The actual files we will be working with #
-DOT_FILES="xinitrc Xdefaults xbindkeysrc vimrc bashrc vim"
+DOT_FILES="gitconfig xinitrc Xdefaults xbindkeysrc vimrc bashrc vim"
 
 
 # Logic #

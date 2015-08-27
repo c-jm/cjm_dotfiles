@@ -45,12 +45,13 @@
 
 
 ## Start dwb ##
-"firefox-nightly"
+"firefox"
   Control + w
 
 ## Start dmenu ##
 "dmenu_run"
   Control + p
+
 
 
 
