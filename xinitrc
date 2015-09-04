@@ -6,15 +6,9 @@
 
 #!/bin/sh
 
-
-# Load our resources
-#xrdb -load ~/.Xresources
-
 # Set the annoying beep off.
 xset -b 
 
-# Start my wallpaper 
-hsetroot -full ~/data/img/wall/et.jpg
 
 # Use xbindkeys to manage the keybindings #
 xbindkeys &
@@ -23,7 +17,7 @@ xbindkeys &
 urxvtd &
 
 # Start the manager in the background #
-2bwm 
+dwm
 
 
 
