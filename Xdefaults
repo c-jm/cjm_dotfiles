@@ -10,9 +10,11 @@ URxvt.font:         xft:inconsolata:pixelsize=20
 Xft.dpi:            96
 Xft.antialias:      true
 Xft.rgba:           rgb
-Xft.hinting:        true
+Xft.hinting:        True
 Xft.hintstyle:      hintfull
 URxvt.letterSpace:  -1
+
+XTerm.loginTerm:    True
 
 URxvt*foreground: white
 URxvt*background: black
