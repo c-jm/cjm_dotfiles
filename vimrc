@@ -11,19 +11,33 @@ call vundle#begin()
 
 " Plugins 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'plasticboy/vim-markdown'
+Plugin 'mikewest/vimroom'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+Bundle 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
 
+" **** GVim Configuration ****
+:set guioptions-=m  "remove menu bar
+:set guioptions-=T  "remove toolbar
+:set guioptions-=r  "remove right-hand scroll bar
+:set guioptions-=L  "remove left-hand scroll bar
 
-
-
-
+" Set the font
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
 
 " **** General Configuration ****
-colorscheme hipster
+colorscheme solarized
 set backspace=indent,eol,start " Make backspaces work as intended
 set history=1000               " Make sure we remember history
 set showcmd                    " I do like to see the commands I am running.
@@ -70,7 +84,6 @@ set smartcase
 
 " **** Keyindings ****
 inoremap jj <Esc>
-
 
 " **** Leader Keybindings ****
 nnoremap <Leader>w :w<CR>   " A way to write using leaders and the w
