@@ -17,7 +17,7 @@ EDITOR=vim
 PS1="% "
 
 # Set the package path for openbsd #
-PKG_PATH="http://openbsd.cs.toronto.edu/pub/OpenBSD/5.7/packages/`machine -a`/"
+PKG_PATH="http://openbsd.cs.toronto.edu/pub/OpenBSD/`uname -r`/packages/`machine -a`/"
 
 export PATH HOME TERM EDITOR PS1 PKG_PATH
 
