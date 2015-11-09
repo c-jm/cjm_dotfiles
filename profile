@@ -37,3 +37,13 @@ DATE=$(date +%x)
 export NOTES_DIR TIME DATE PS1 NAME EMAIL
 
 
+# OPENBSD ONLY #
+#______________#
+
+# Function Name: set
+function setvol
+{
+    mixerctl outputs.master=$1,$2
+}
+
+
