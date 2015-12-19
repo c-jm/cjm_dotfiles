@@ -1,4 +1,10 @@
-XDG_DESKTOP_DIR="$HOME/desk"
-XDG_DOWNLOAD_DIR="$HOME/down"
+# userdirs.dir
+#
+# Colin J. Mills
+#
+# 2015-12-19
+
+XDG_DESKTOP_DIR="$HOME"
+XDG_DOWNLOAD_DIR="$HOME"
 
 
