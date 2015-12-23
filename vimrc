@@ -37,7 +37,7 @@ if has("gui_running")
 endif
 
 " **** General Configuration ****
-colorscheme solarized
+colorscheme hipster
 set backspace=indent,eol,start " Make backspaces work as intended
 set history=1000               " Make sure we remember history
 set showcmd                    " I do like to see the commands I am running.
@@ -97,25 +97,4 @@ nnoremap <Leader>ie :r!echo $EMAIL<CR> " Insert my email into a file
 
 noremap <Leader>bsp :vsp<CR> " Vertical Split
 nnoremap <Leader>sp  :sp<CR>  " Vertical Split
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
