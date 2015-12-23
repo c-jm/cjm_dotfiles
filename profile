@@ -34,7 +34,7 @@ NOTES_DIR=$HOME/data/notes
 # I like to have the current date in scripts, and also its useful. #
 DATE=$(date +%x)
 
-export NOTES_DIR TIME DATE PS1 NAME EMAIL
+export NOTES_DIR DATE PS1 NAME EMAIL
 
 
 # OPENBSD ONLY #
