@@ -21,6 +21,9 @@ urxvtd &
 # Set my wallpaper
 sh $HOME/.fehbg
 
+# Start my dwm bar
+sh $HOME/bin/dwm-status.sh &
+
 # Start the manager in the background #
 dwm
 
