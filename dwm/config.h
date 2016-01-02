@@ -5,11 +5,11 @@ static const char *fonts[] = {
 	"monospace:size=10"
 };
 static const char dmenufont[]       = "monospace:size=10";
-static const char normbordercolor[] = "#444444";
+static const char normbordercolor[] = "#203737";
 static const char normbgcolor[]     = "#222222";
 static const char normfgcolor[]     = "#bbbbbb";
-static const char selbordercolor[]  = "#005577";
-static const char selbgcolor[]      = "#005577";
+static const char selbordercolor[]  = "#7F7F7F";
+static const char selbgcolor[]      = "#990000";
 static const char selfgcolor[]      = "#eeeeee";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -52,9 +52,6 @@ static const Layout layouts[] = {
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
-
-/* commands */
-static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
