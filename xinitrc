@@ -15,8 +15,11 @@ xset -b
 # Use xbindkeys to manage the keybindings #
 xbindkeys &
 
-# Start urxvtd #
+# Start the urxvt daemon
 urxvtd &
+
+# Set my wallpaper
+sh $HOME/.fehbg
 
 # Start the manager in the background #
 dwm
