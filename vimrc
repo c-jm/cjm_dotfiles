@@ -1,5 +1,6 @@
 " Colin Mills .vimrc 
 " Date: 2015/05/27 
+"
 " A .vimrc that is a clean slate
 " Took strong inspiration from http:://github.com/skwp/dotfiles/blob/master/vimrc  
 
@@ -14,7 +15,13 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'mikewest/vimroom'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'alvan/vim-closetag'
+Plugin 'pangloss/vim-javascript'
+Plugin 'honza/vim-snippets'
+
+Plugin 'SirVer/ultisnips'
 
 call vundle#end()
 filetype plugin indent on
@@ -82,6 +89,9 @@ set ignorecase
 set smartcase
 
 
+" Aliases
+command! -nargs=0 Sw w !sudo tee % > /dev/null
+
 " **** Keyindings ****
 inoremap jj <Esc>
 
@@ -97,4 +107,10 @@ nnoremap <Leader>ie :r!echo $EMAIL<CR> " Insert my email into a file
 
 noremap <Leader>bsp :vsp<CR> " Vertical Split
 nnoremap <Leader>sp  :sp<CR>  " Vertical Split
+
+
+"**** Ultisnips ****"
+let g:UltiSnipsSnippetsDir = "~/.vim/bundle/ultisnips/UltiSnips"
+
+
 
