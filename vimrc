@@ -20,8 +20,10 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'alvan/vim-closetag'
 Plugin 'pangloss/vim-javascript'
 Plugin 'honza/vim-snippets'
-
 Plugin 'SirVer/ultisnips'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-scripts/molokai'
+Plugin 'vim-airline/vim-airline'
 
 call vundle#end()
 filetype plugin indent on
@@ -43,8 +45,11 @@ if has("gui_running")
   endif
 endif
 
+
+set t_Co=256
+
 " **** General Configuration ****
-colorscheme hipster
+colorscheme molokai
 set backspace=indent,eol,start " Make backspaces work as intended
 set history=1000               " Make sure we remember history
 set showcmd                    " I do like to see the commands I am running.
