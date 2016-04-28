@@ -1,4 +1,4 @@
-####################
+###################
 # File Name: .profile
 # Author:    Colin J. Mills
 # Date:      2015/05/28
@@ -12,8 +12,8 @@
 # The possible values are:
 #
 # OBSD: OpenBSD.
-# FBSD: FreeBSD.
 # ARCH_LINUX: Arch Linux.
+# MAC: When I get there.
 ####################
 
 # This OS  variable determines which OS we are running on.
@@ -40,6 +40,14 @@ EMAIL="colin.j.mills96@gmail.com"
 DATE=$(date +%x)
 
 export DATE PS1 NAME EMAIL
+
+
+# Global  #
+# ======= #
+
+
+alias evrc="vim $HOME/.vimrc"
+
 
 # OS Specific #
 # =========== #
@@ -101,6 +109,7 @@ if [ "$OS" =  "OBSD" ]; then
 
 elif [ "$OS" = "ARCH_LINUX" ]; then
 
+    PATH=/home/cjm/bin/scripts:$PATH
     PKG_BUILD_DIR=/home/cjm/bin/pkg-builds/
 
     # Aliases #
