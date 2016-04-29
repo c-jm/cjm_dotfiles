@@ -4,29 +4,9 @@
 " A .vimrc that is a clean slate
 " Took strong inspiration from http:://github.com/skwp/dotfiles/blob/master/vimrc  
 
-set nocompatible
-filetype off
+" Source Oother Files
+so ~/.vim/plugins.vim
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" Plugins 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'mikewest/vimroom'
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'alvan/vim-closetag'
-Plugin 'pangloss/vim-javascript'
-Plugin 'honza/vim-snippets'
-Plugin 'SirVer/ultisnips'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vim-scripts/molokai'
-Plugin 'vim-airline/vim-airline'
-
-call vundle#end()
-filetype plugin indent on
 
 " **** GVim Configuration ****
 :set guioptions-=m  "remove menu bar
@@ -49,7 +29,9 @@ endif
 set t_Co=256
 
 " **** General Configuration ****
-colorscheme molokai
+set background=dark
+colorscheme hybrid
+
 set backspace=indent,eol,start " Make backspaces work as intended
 set history=1000               " Make sure we remember history
 set showcmd                    " I do like to see the commands I am running.
@@ -86,6 +68,7 @@ set tabstop=4
 set expandtab
 set nowrap
 set linebreak
+set tw=80
 
 
 " **** Searching ****
@@ -95,7 +78,7 @@ set smartcase
 
 
 " Aliases
-command! -nargs=0 Sw w !sudo tee % > /dev/null
+command! -nargs=0 Sw w!sudo tee % > /dev/null
 
 " **** Keyindings ****
 inoremap jj <Esc>
@@ -104,18 +87,27 @@ inoremap jj <Esc>
 nnoremap <Leader>w :w<CR>   " A way to write using leaders and the w
 nnoremap <Leader>wq :wq<CR> " Same for writing and quitting.
 
-nnoremap <Leader>id :r!echo $DATE<CR> " Insert the date into a file
-nnoremap <Leader>it :r!echo $TIME<CR> " Insert the time into a file
+nnoremap <Leader>evrc :vsp $MYVIMRC <CR> " A way to be able to open my vimrc
 
-nnoremap <Leader>in :r!echo $NAME<CR> " Insert my name into a file
-nnoremap <Leader>ie :r!echo $EMAIL<CR> " Insert my email into a file
 
-noremap <Leader>bsp :vsp<CR> " Vertical Split
+
+" **** Split Management ****
+
+" Remap all the keys for easy moving around
+set splitbelow
+set splitright
+
+nnoremap  <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-L> <C-W><C-L>
+
+noremap <Leader>bsp  :vsp<CR> " Vertical Split
 nnoremap <Leader>sp  :sp<CR>  " Vertical Split
 
 
 "**** Ultisnips ****"
-let g:UltiSnipsSnippetsDir = "~/.vim/bundle/ultisnips/UltiSnips"
+let g:UltiSnipsSnippetsDir = "~/.vim/snippets/"
 
 
 
