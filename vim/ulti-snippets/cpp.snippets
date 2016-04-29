@@ -1,0 +1,24 @@
+
+
+
+snippet inclg "The include gard" b
+
+
+#ifndef __`!v toupper(expand('%:r'))`_H__
+#define __`!v toupper(expand('%:r'))`_H__
+
+$1
+
+#endif
+
+endsnippet
+
+
+snippet newstruct "Create a new structure" b
+
+typedef struct $1
+{
+	$2
+} $1;
+
+endsnippet
