@@ -20,8 +20,8 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 
 " Ultisnips
-Plugin 'honza/vim-snippets'
 Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 "*** TPope ****"
 Plugin 'tpope/vim-vinegar'
