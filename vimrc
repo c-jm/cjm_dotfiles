@@ -7,7 +7,6 @@
 " Source Oother Files
 so ~/.vim/plugins.vim
 
-
 " **** GVim Configuration ****
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
@@ -29,9 +28,7 @@ endif
 set t_Co=256
 
 " **** General Configuration ****
-set background=dark
-colorscheme hybrid
-
+colorscheme gruvbox
 set backspace=indent,eol,start " Make backspaces work as intended
 set history=1000               " Make sure we remember history
 set showcmd                    " I do like to see the commands I am running.
@@ -70,10 +67,10 @@ set tabstop=4
 set expandtab
 set nowrap
 set linebreak
-set tw=80
+set tw=100
 
 
-" **** Searching ****
+" *80*** Searching ****
 set incsearch
 set ignorecase
 set smartcase
@@ -89,22 +86,21 @@ inoremap jj <Esc>
 nnoremap <Leader>w :w<CR>   " A way to write using leaders and the w
 nnoremap <Leader>wq :wq<CR> " Same for writing and quitting.
 
-nnoremap <Leader>evrc :vsp $MYVIMRC <CR> " A way to be able to open my vimrc
+nnoremap <Leader>ev :vsp $MYVIMRC <CR> " A way to be able to open my vimrc
+nnoremap <Leader>el :vsp $HOME/.vim/plugins.vim <CR> " A way to be able to open my vimrc
 
-
-
-" **** Split Management ****
+"" **** Split Management ****
 
 " Remap all the keys for easy moving around
 set splitbelow
 set splitright
 
-nnoremap  <C-J> <C-W><C-J>
+nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
 
-noremap <Leader>bsp  :vsp<CR> " Vertical Split
+noremap <Leader>vp  :vsp<CR> " Vertical Split
 nnoremap <Leader>sp  :sp<CR>  " Vertical Split
 
 
@@ -113,7 +109,6 @@ let  g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
     
-
 let g:UltiSnipsSnippetsDir = "~/.vim/UltiSnips/"
 
 

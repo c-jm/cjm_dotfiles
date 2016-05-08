@@ -13,6 +13,9 @@ Plugin 'alvan/vim-closetag'
 Plugin 'pangloss/vim-javascript'
 Plugin 'fatih/vim-go'
 Plugin 'w0ng/vim-hybrid'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'mattn/emmet-vim'
+Plugin 'jwalton512/vim-blade'
 
 
 " Pandoc
@@ -25,7 +28,6 @@ Plugin 'honza/vim-snippets'
 
 "*** TPope ****"
 Plugin 'tpope/vim-vinegar'
-
 
 
 call vundle#end()
