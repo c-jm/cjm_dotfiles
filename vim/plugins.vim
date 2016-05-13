@@ -17,7 +17,8 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'mattn/emmet-vim'
 Plugin 'jwalton512/vim-blade'
 
-
+"" Syntastic 
+Plugin 'scrooloose/syntastic'
 " Pandoc
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'

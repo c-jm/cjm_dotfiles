@@ -37,9 +37,8 @@ set gcr=a:blinkon0             " No cursor blink
 set visualbell                 " Audio hurts the ears
 set autoread                   " Reload changes outside of vim
 set hidden                     " Let buffers work correctly.
-
-
-
+set number
+set relativenumber
 
 " **** Disable Commenting **** "
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cor
