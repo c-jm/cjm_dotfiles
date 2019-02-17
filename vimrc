@@ -1,11 +1,26 @@
-" Colin Mills .vimrc 
-" Date: 2015/05/27 
-"
-" A .vimrc that is a clean slate
-" Took strong inspiration from http:://github.com/skwp/dotfiles/blob/master/vimrc  
+set nocompatible
+filetype off
 
-" Source Oother Files
-so ~/.vim/plugins.vim
+set rtp+=d:/programming/dotfiles/vim
+
+set rtp+=$HOME/vimfiles/bundle/Vundle.vim
+call vundle#begin('$HOME/vimfiles/bundle/')
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'mattn/emmet-vim'
+
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+
+Plugin 'tpope/vim-vinegar'
+Plugin 'mtth/scratch.vim'
+
+call vundle#end()
+
+filetype plugin indent on
+
 
 " **** GVim Configuration ****
 :set guioptions-=m  "remove menu bar
@@ -14,21 +29,13 @@ so ~/.vim/plugins.vim
 :set guioptions-=L  "remove left-hand scroll bar
 
 " Set the font
-if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=Inconsolata\ 12
-  elseif has("gui_macvim")
-    set guifont=Menlo\ Regular:h14
-  elseif has("gui_win32")
-    set guifont=Consolas:h11:cANSI
-  endif
-endif
-
+set guifont=Source_Code_Pro:h12
 
 set t_Co=256
 
 " **** General Configuration ****
-colorscheme gruvbox
+colorscheme minimalist
+
 set backspace=indent,eol,start " Make backspaces work as intended
 set history=1000               " Make sure we remember history
 set showcmd                    " I do like to see the commands I am running.
@@ -38,10 +45,8 @@ set visualbell                 " Audio hurts the ears
 set autoread                   " Reload changes outside of vim
 set hidden                     " Let buffers work correctly.
 set number
-set relativenumber
-
-" **** Disable Commenting **** "
-autocmd BufNewFile,BufRead * setlocal formatoptions-=cor
+set tw=10000
+set nowrap
 
 " Set the mapleader to space
 let mapleader="\<Space>"
@@ -50,7 +55,6 @@ let mapleader="\<Space>"
 set noswapfile
 set nobackup
 set nowb
-
 
 " **** Syntax Highlighting **** 
 syntax on                      " Syntax on
@@ -64,29 +68,20 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set expandtab
-set nowrap
-set linebreak
-set tw=100
+set tw=100000
 
 
 " *80*** Searching ****
 set incsearch
 set ignorecase
 set smartcase
-
-
-" Aliases
-command! -nargs=0 Sw w!sudo tee % > /dev/null
-
+"
 " **** Keyindings ****
 inoremap jj <Esc>
 
 " **** Leader Keybindings ****
 nnoremap <Leader>w :w<CR>   " A way to write using leaders and the w
 nnoremap <Leader>wq :wq<CR> " Same for writing and quitting.
-
-nnoremap <Leader>ev :vsp $MYVIMRC <CR> " A way to be able to open my vimrc
-nnoremap <Leader>el :vsp $HOME/.vim/plugins.vim <CR> " A way to be able to open my vimrc
 
 "" **** Split Management ****
 
@@ -99,16 +94,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
 
-noremap <Leader>vp  :vsp<CR> " Vertical Split
-nnoremap <Leader>sp  :sp<CR>  " Vertical Split
+noremap <Leader>vsp  :vsp<CR> " Vertical Split
+noremap <Leader>hsp  :hsp<CR> " Vertical Split
 
+nnoremap <Leader>pi :PluginInstall<CR>
+nnoremap <Leader>pc :PluginClean<CR>
 
-"**** Ultisnips ****"
-let  g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-    
-let g:UltiSnipsSnippetsDir = "~/.vim/UltiSnips/"
-
-
-
+nnoremap <Leader>r :source %<CR>
