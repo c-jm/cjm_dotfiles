@@ -7,9 +7,10 @@ set rtp+=$HOME/vimfiles/bundle/Vundle.vim
 call vundle#begin('$HOME/vimfiles/bundle/')
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'itchyny/lightline.vim'
+
 Plugin 'mattn/emmet-vim'
+Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
@@ -34,7 +35,7 @@ set guifont=Source_Code_Pro:h12
 set t_Co=256
 
 " **** General Configuration ****
-colorscheme minimalist
+colorscheme happy_hacking
 
 set backspace=indent,eol,start " Make backspaces work as intended
 set history=1000               " Make sure we remember history
@@ -57,6 +58,9 @@ set nobackup
 set nowb
 
 " **** Syntax Highlighting **** 
+set encoding=utf-8
+set fileencoding=utf-8
+
 syntax on                      " Syntax on
 filetype plugin on             " Determine by filetype which syntax to use 
 
@@ -75,7 +79,7 @@ set tw=100000
 set incsearch
 set ignorecase
 set smartcase
-"
+
 " **** Keyindings ****
 inoremap jj <Esc>
 
@@ -83,11 +87,36 @@ inoremap jj <Esc>
 nnoremap <Leader>w :w<CR>   " A way to write using leaders and the w
 nnoremap <Leader>wq :wq<CR> " Same for writing and quitting.
 
-"" **** Split Management ****
+
+fu! RenameIdentifier()
+    redraw
+    let currentIdentifier = expand("<cword>")
+    let msg = 'Enter what you want to change ' . currentIdentifier . ' with: '
+    let change = input(msg)
+    let cmd = "%s/" . currentIdentifier . "/" . change . "/g"
+    let shouldExec = input('Should we execute' . cmd . ' (y/n): ')
+
+    redraw
+    if shouldExec == 'y'
+        execute cmd
+    else
+        echo 'Did not exec cmd ' . cmd
+    endif
+
+endfunction
+
+" **** Split Management ****
 
 " Remap all the keys for easy moving around
 set splitbelow
 set splitright
+"" *************************
+
+" Lightline
+" **********
+set laststatus=2
+
+" **** Remaps ****
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -97,7 +126,7 @@ nnoremap <C-L> <C-W><C-L>
 noremap <Leader>vsp  :vsp<CR> " Vertical Split
 noremap <Leader>hsp  :hsp<CR> " Vertical Split
 
-nnoremap <Leader>pi :PluginInstall<CR>
-nnoremap <Leader>pc :PluginClean<CR>
-
 nnoremap <Leader>r :source %<CR>
+nnoremap <Leader>re :call RenameIdentifier()<CR>
+
+
