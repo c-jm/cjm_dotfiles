@@ -1,8 +1,6 @@
 set nocompatible
 filetype off
 
-set rtp+=d:/programming/dotfiles/vim
-
 set rtp+=$HOME/vimfiles/bundle/Vundle.vim
 call vundle#begin('$HOME/vimfiles/bundle/')
 
@@ -22,7 +20,6 @@ call vundle#end()
 
 filetype plugin indent on
 
-
 " **** GVim Configuration ****
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
@@ -30,12 +27,12 @@ filetype plugin indent on
 :set guioptions-=L  "remove left-hand scroll bar
 
 " Set the font
-set guifont=Source_Code_Pro:h12
+set guifont=Hack:h16
 
 set t_Co=256
 
 " **** General Configuration ****
-colorscheme happy_hacking
+colorscheme darkblue
 
 set backspace=indent,eol,start " Make backspaces work as intended
 set history=1000               " Make sure we remember history
@@ -117,7 +114,6 @@ set splitright
 set laststatus=2
 
 " **** Remaps ****
-
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-H> <C-W><C-H>
@@ -129,4 +125,8 @@ noremap <Leader>hsp  :hsp<CR> " Vertical Split
 nnoremap <Leader>r :source %<CR>
 nnoremap <Leader>re :call RenameIdentifier()<CR>
 
+nnoremap <Leader>ss :set spell<CR>
+nnoremap <Leader>nss :set nospell<CR>
+
+nnoremap <Leader>icd :pu=strftime('%c')<CR>
 
