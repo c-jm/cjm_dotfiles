@@ -1,23 +1,6 @@
 set nocompatible
 filetype off
 
-set rtp+=$HOME/vimfiles/bundle/Vundle.vim
-call vundle#begin('$HOME/vimfiles/bundle/')
-
-Plugin 'gmarik/Vundle.vim'
-Plugin 'itchyny/lightline.vim'
-
-Plugin 'mattn/emmet-vim'
-Plugin 'jiangmiao/auto-pairs'
-
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
-
-Plugin 'tpope/vim-vinegar'
-Plugin 'mtth/scratch.vim'
-
-call vundle#end()
-
 filetype plugin indent on
 
 " **** GVim Configuration ****
@@ -27,12 +10,12 @@ filetype plugin indent on
 :set guioptions-=L  "remove left-hand scroll bar
 
 " Set the font
-set guifont=Hack:h16
+set guifont=:s:h16
 
 set t_Co=256
 
 " **** General Configuration ****
-colorscheme darkblue
+colorscheme monokai-pro
 
 set backspace=indent,eol,start " Make backspaces work as intended
 set history=1000               " Make sure we remember history
