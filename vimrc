@@ -16,6 +16,7 @@ set t_Co=256
 
 " **** General Configuration ****
 colorscheme monokai-pro
+set guifont=Source_Code_Pro:h18
 
 set backspace=indent,eol,start " Make backspaces work as intended
 set history=1000               " Make sure we remember history
