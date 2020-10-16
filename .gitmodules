@@ -25,3 +25,6 @@
 [submodule "vimfiles/pack/plugins/start/nerdtree"]
 	path = vimfiles/pack/plugins/start/nerdtree
 	url = https://github.com/preservim/nerdtree
+[submodule "vimfiles/pack/plugins/start/nord-vim"]
+	path = vimfiles/pack/plugins/start/nord-vim
+	url = https://github.com/arcticicestudio/nord-vim
