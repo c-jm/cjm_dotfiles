@@ -10,3 +10,15 @@
 [submodule "vimfiles/pack/plugins/start/coc.nvim"]
 	path = vimfiles/pack/plugins/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim
+[submodule "vimfiles/pack/plugins/start/hybrid.vim"]
+	path = vimfiles/pack/plugins/start/hybrid.vim
+	url = https://github.com/vim-scripts/hybrid.vim
+[submodule "vimfiles/pack/plugins/start/vim-dogrun"]
+	path = vimfiles/pack/plugins/start/vim-dogrun
+	url = https://github.com/wadackel/vim-dogrun
+[submodule "vimfiles/pack/plugins/start/auto-pairs"]
+	path = vimfiles/pack/plugins/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
+[submodule "vimfiles/pack/plugins/start/vim-rainbow"]
+	path = vimfiles/pack/plugins/start/vim-rainbow
+	url = https://github.com/frazrepo/vim-rainbow
