@@ -1,9 +1,6 @@
 [submodule "vimfiles/pack/plugins/start/vim-airline"]
 	path = vimfiles/pack/plugins/start/vim-airline
 	url = git@github.com:vim-airline/vim-airline
-[submodule "vimfiles/pack/plugins/start/monokai-pro.vim"]
-	path = vimfiles/pack/plugins/start/monokai-pro.vim
-	url = git@github.com:co1ncidence/monokai-pro.vim
 [submodule "vimfiles/pack/plugins/start/vim-vinegar"]
 	path = vimfiles/pack/plugins/start/vim-vinegar
 	url = git@github.com:tpope/vim-vinegar
